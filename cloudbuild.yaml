@@ -1,5 +1,9 @@
 steps:
 
+    - id: "Rodando Go Env"
+      name: 'gcr.io/cloud-builders/go'
+      args: ['go','env']
+   
     - id: "Rodando Go Test"
       name: 'gcr.io/cloud-builders/go'
       args: ['go','test']
