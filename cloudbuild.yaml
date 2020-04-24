@@ -1,0 +1,11 @@
+steps:
+
+    - id: "Rodando Go Test"
+      name: 'gcr.io/cloud-builders/go'
+      args: ['go','test']
+
+    - id: "Rodando Go Build"
+      name: 'gcr.io/cloud-builders/go'
+      args: ['go','build', 'main.go']
+    
+    
