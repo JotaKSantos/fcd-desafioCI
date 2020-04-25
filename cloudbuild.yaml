@@ -8,6 +8,7 @@ steps:
     - id: "Rodando Go Env"
       name: 'gcr.io/cloud-builders/go'
       args: ['go','env']
+      env: ["GOPATH=."]
    
     - id: "Rodando Go Test"
       name: 'gcr.io/cloud-builders/go'
