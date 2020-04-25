@@ -26,3 +26,7 @@ steps:
 
   - id: "Rodando Imagem"
     name: 'gcr.io/$PROJECT_ID/desafioci'
+
+  - id: "Salvando Imagem"
+    images:
+    - 'gcr.io/$PROJECT_ID/desafioci:latest'
