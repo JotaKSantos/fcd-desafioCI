@@ -3,22 +3,22 @@ steps:
   - id: go_version
     name: "gcr.io/cloud-builders/go"
     args: ["version"]
-    env: ["GOPATH=src/desafioci/"]
+    env: ["GOPATH=."]
 
   - id: "Rodando Go Env"
     name: 'gcr.io/cloud-builders/go'
     args: ['env']
-    env: ["GOPATH=src/desafioci/"]
+    env: ["GOPATH=."]
   
   - id: "Rodando Go Test"
     name: 'gcr.io/cloud-builders/go'
-    args: ['test']
-    env: ["GOPATH=src/desafioci/"]
+    args: ['test', 'desafioci']
+    env: ["GOPATH=."]
 
   - id: "Rodando Go Build"
     name: 'gcr.io/cloud-builders/go'
-    args: ['build', 'main.go']
-    env: ["GOPATH=src/desafioci/"]
+    args: ['build', './src/desafioci/main.go']
+    env: ["GOPATH=."]
 
   - id: "Gerando Imagem"
     name: 'gcr.io/cloud-builders/docker'
