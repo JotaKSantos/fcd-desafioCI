@@ -12,12 +12,12 @@ steps:
   
   - id: "Rodando Go Test"
     name: 'gcr.io/cloud-builders/go'
-    args: ['test']
+    args: ['test', 'desafioci']
     env: ["GOPATH=."]
 
   - id: "Rodando Go Build"
     name: 'gcr.io/cloud-builders/go'
-    args: ['build', 'main.go']
+    args: ['build', './src/desafioci/main.go']
     env: ["GOPATH=."]
 
   - id: "Gerando Imagem"
